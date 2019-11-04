@@ -1,0 +1,96 @@
+.show_parts button{
+	margin-top: 150px;
+	margin-left: 10%;
+			width:180px;
+		height: 60px;
+		background-color: blue;
+		border-radius: 15px;
+		color:white;
+		font-size: 18px;
+		border:none;	
+}
+
+.show_parts{
+	width: 100%;
+	height: 75vh;
+	background-color: white;
+	border: 2px solid red;
+
+}
+
+.show_btn button{
+		display: none;
+
+				width:140px;
+		height: 45px;
+		background-color: blue;
+		border-radius: 15px;
+		color:white;
+		font-size: 18px;
+		border:none;
+		margin-left: 60%;
+}
+
+.select_ch{
+	overflow: scroll;
+}
+@media (max-width: 362px){
+.headline{
+	font-size: 22px;
+	}
+
+		.note_english{
+		width:60%;
+		height: ;
+		margin-left: 20%;
+		}
+	.note_computer{
+		width:60%;
+		height: ;
+		margin-left:20%;
+		}
+	.note_sst{
+		width:60%;
+		height: ;
+		margin-left:20%;
+
+
+		}
+	.note_science{
+		width:60%;
+		height: ;
+		margin-left: 20%;
+
+		}
+	.note_hindi{
+		width:60%;
+		height: ;
+		margin-left: 20%;
+		}
+	.note_math{
+		width:60%;
+		height: ;
+		margin-left: 20%;
+		}
+
+
+	.headline h1{
+		line-height: 60px;
+		font-size: 25px;
+	}
+	@keyframes kunal1{
+    0%{
+        color:groove ;
+    }
+    50%{
+        transform: rotateY(90deg);
+        font-size:10px;
+    }
+    100%{
+    	color:red;
+    	 transform: rotateY(0deg);
+        font-size:32px;
+    }
+
+}
+}
