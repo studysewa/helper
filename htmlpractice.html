@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+ <head> 
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0"> 
+  <style>
+     #h1 {
+   color:#fff ;
+   background: rgb( 233 , 33 , 55 ) ;
+   text-align: center ;
+   padding: 0px ;
+ }
+
+ #txt {
+   width: 95% ;
+   padding: 10px ;
+   height: 400px ;
+   font-size: 14px ;
+ }
+
+ #b1 {
+   background: #000 ;
+   color: #fff ;
+   width: 49.1% ;
+   height: 47px ;
+   margin: 0 ;
+   box-shadow: 2px 2px 1px #00f ;
+   border: 1px solid #000 ;
+ }
+ 
+ button {
+   background: #000 ;
+   color: #fff ;
+   width: 30% ;
+   height: 20px ;
+   margin: 0 ;
+   box-shadow: 2px 2px 1px #f00 ;
+   border: 1px solid #000 ;
+ }
+
+ #end , #start {
+   background: #fff ;
+   color: #000 ;
+   width: 30% ;
+   height: 30px ;
+   box-shadow: 2px 2px 1px #000 ;
+   border: 1px solid #000 ;
+   border-radius: 40% ;
+ }
+     
+     </style> 
+  <script>
+         
+         function play() {
+   
+   var txt = document.getElementById("txt").value ;   
+   
+   document.getElementById("out").innerHTML 
+   = txt
+ }
+ 
+ function remove() {
+   
+   document.getElementById("txt").value
+   = " "  ;
+   
+   document.getElementById("out").innerHTML 
+   = " .... " ;
+ }
+ 
+
+ 
+ 
+ // Start Tags
+   function tag_start() {
+    document.getElementById("txt").innerHTML 
+    += "<html> " + "\n" + " <head> " + 
+    "\n &nbsp; <title> TEST </title> " +
+    "\n" + " </head>" + "\n <body> \n" ;
+   
+   
+    }
+
+   
+ // 1 p
+   function tag_p() {
+   document.getElementById("txt").innerHTML 
+   += "\n &nbsp; <p>  </p> " }
+
+ // 2 div
+   function tag_div() {
+   document.getElementById("txt").innerHTML 
+   += "\n &nbsp; <div>  </div> " }
+
+ // 3 nav
+   function tag_nav() {
+   document.getElementById("txt").innerHTML 
+   += "\n &nbsp; <nav>  </nav> " }
+
+ // 4 center
+   function tag_center() {
+   document.getElementById("txt").innerHTML 
+   += "\n &nbsp; <center>   " }
+  
+ // 5 center
+   function tag_center_closed() {
+   document.getElementById("txt").innerHTML 
+   += "\n &nbsp; </center> " }
+
+
+ // 6 mark
+   function tag_mark() {
+   document.getElementById("txt").innerHTML 
+   += "\n &nbsp; <mark>  </mark> " }
+
+ // 7 span
+   function tag_span() {
+   document.getElementById("txt").innerHTML 
+   += "\n &nbsp; <span>  </span> " }
+
+ // 8 img
+   function tag_img() {
+   document.getElementById("txt").innerHTML 
+   += "\n &nbsp; <img src='  '> " }
+
+// 9 h1
+   function tag_h1() {
+   document.getElementById("txt").innerHTML 
+   += "\n &nbsp; <h1>  </h1> " }
+
+// 10 q 
+   function tag_q() {
+   document.getElementById("txt").innerHTML 
+   += "\n &nbsp; <q>  </q> " }
+
+// 11 pre
+   function tag_pre() {
+   document.getElementById("txt").innerHTML 
+   += "\n &nbsp; <pre>  </pre> " }
+
+
+
+ 
+ // End Tags
+   function tag_end() {
+   document.getElementById("txt").innerHTML 
+   += "\n </body> " + "\n</html>" }
+
+ 
+/*  document.getElementById("txt").innerHTML 
+  += "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n" + 
+   " </body> \n" + "</html> " ;
+*/
+         
+         </script> 
+  <meta charset="UTF-8"> 
+  <title> Quanta HTML Editor </title> 
+ </head> 
+ <body> 
+  <h1 id="h1"> Quanta ONLINE HTML CODE RUNNER </h1> 
+  <details> 
+   <summary> Write your programe &lt;/&gt; in HTML </summary> 
+   <br> 
+   <center> 
+    <button id="start" onclick="tag_start()"> Start Tags </button> 
+   </center> 
+   <br> 
+   <button onclick="tag_p()"> &lt;p&gt; </button> 
+   <button onclick="tag_div()"> &lt;div&gt; </button> 
+   <button onclick="tag_nav()"> &lt;nav&gt; </button> 
+   <br> 
+   <br> 
+   <center> 
+    <button onclick="tag_center()"> &lt;center&gt; </button> 
+    <button onclick="tag_center_closed()"> &lt;/center&gt; </button> 
+   </center> 
+   <br> 
+   <button onclick="tag_mark()"> &lt;mark&gt; </button> 
+   <button onclick="tag_span()"> &lt;span&gt; </button> 
+   <button onclick="tag_img()"> &lt;img&gt; </button> 
+   <br> 
+   <br> 
+   <button onclick="tag_h1()"> &lt;h1&gt; </button> 
+   <button onclick="tag_q()"> &lt;q&gt; </button> 
+   <button onclick="tag_pre()"> &lt;pre&gt; </button> 
+   <br> 
+   <br> 
+   <center> 
+    <button id="end" onclick="tag_end()"> End Tags </button> 
+   </center> 
+   <br> 
+  </details> 
+  <br> 
+  <textarea id="txt"></textarea> 
+  <button id="b1" onclick="play()"> Play </button> 
+  <button id="b1" onclick="remove()"> Remove </button> 
+  <h1 id="h1"> OUTPUT </h1> 
+  <div id="out">
+    Here you will get output 
+  </div> 
+ </body>
+</html>
